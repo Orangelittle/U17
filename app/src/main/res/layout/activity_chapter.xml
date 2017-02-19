@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chapter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+    <LinearLayout
+        android:id="@+id/preview"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/chapter_head"/>
+        <include layout="@layout/chapter_list"/>
+        <include layout="@layout/chapter_guess"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chapter_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <ImageView
+        android:id="@+id/chapter_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_top_back"
+        android:layout_margin="5dp"
+        android:onClick="onClick"
+        />
+    <ImageView
+        android:id="@+id/chapter_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_top_download"
+        android:layout_gravity="end"
+        android:layout_margin="5dp"
+        android:onClick="onClick"
+        />
+    <LinearLayout
+        android:id="@+id/chapter_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="#f5f2f2"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/collection"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="添加收藏"
+            android:onClick="onClick"
+            android:layout_marginRight="10dp"
+            android:textColor="#f17f7f"
+            android:background="@drawable/chapter_collection_shape"
+            />
+        <TextView
+            android:id="@+id/read"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="开始阅读"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/chapter_read_shape"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+</FrameLayout>

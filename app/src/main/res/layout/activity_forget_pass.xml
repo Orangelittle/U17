@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myEditView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toppp"
+        android:background="@drawable/bg_toolbar"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            style="@style/text_title"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_top_back"
+            />
+    </RelativeLayout>
+    <com.orangelittle.u17.widget.MyEditText
+        android:id="@+id/forget_phone"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/toppp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        myEditView:text_hint="请输入绑定的手机号"
+        myEditView:isNum="true"
+        myEditView:maxLenght="11"
+        myEditView:warnText="请输入绑定的手机号"></com.orangelittle.u17.widget.MyEditText>
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:id="@+id/forget_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/forget_phone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/forget_iv_code"
+        myEditView:isNum="true"
+        myEditView:maxLenght="4"
+        myEditView:text_hint="图形验证码，点击图片即可刷新"
+        myEditView:warnText="图形验证码"></com.orangelittle.u17.widget.MyEditText>
+
+    <ImageView
+        android:id="@+id/forget_iv_code"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/forget_code"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/forget_bt_submit"
+        style="@style/bottom_button"
+        android:layout_below="@+id/forget_code"
+        android:layout_margin="10dp"
+        android:background="@drawable/loginbtn_bg"
+        android:text="获取验证码" />
+
+    <TextView
+        style="@style/text_black_14sp"
+        android:textSize="15sp"
+        android:text="系统会发送短信验证码到您的手机"
+        android:layout_below="@+id/forget_bt_submit"
+        android:layout_marginLeft="10dp"
+        />
+
+</RelativeLayout>

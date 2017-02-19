@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/from_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/from_search_coverImage"
+            android:layout_width="120dp"
+            tools:background="@color/colorBlack"
+            android:layout_height="160dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/from_search_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="镇魂街"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/from_search_vip"
+                android:layout_width="30sp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/from_search_name"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/from_search_name"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                tools:src="@mipmap/icon_comic_vip" />
+
+            <LinearLayout
+                android:id="@+id/from_search_line_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_search_name"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/from_search_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="少年 魔幻" />
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/from_search_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="许晨" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/from_search_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_search_line_1"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:maxWidth="200dp"
+                android:text="hh少年魔幻hhhhhhhhhhhhhhhhhhhhhhhhh"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/from_search_yue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:text="月票值"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/from_search_conTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/from_search_yue"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/from_search_yue"
+                android:text="3790" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+</LinearLayout>

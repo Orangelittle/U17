@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/coverUrl"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerHorizontal="true"
+            app:placeholderImage="@mipmap/main_recycler_image_default" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coverUrl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            tools:text="山海战记" />
+
+        <TextView
+            android:id="@+id/gameType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textSize="10dp"
+            tools:text="卡牌养成" />
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/gameType"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            tools:text="333.66MB" />
+        <com.orangelittle.u17.widget.FlickerProgressBar
+            android:layout_marginTop="5dp"
+            android:id="@+id/downUrl"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/gameType"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="下载"
+            android:textColor="@color/colorWhite"/>
+    </RelativeLayout>
+</LinearLayout>

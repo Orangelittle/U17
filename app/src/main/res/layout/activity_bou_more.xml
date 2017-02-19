@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="moreAdapter"
+            type="com.orangelittle.u17.adapter.Comic_RecycleAdapter"/>
+    </data>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/activity_bou_more"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:id="@+id/more_lin"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/more_back"
+            android:src="@mipmap/toolbar_back_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick" />
+        <TextView
+            android:id="@+id/more_title"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/more_update"
+            android:padding="16dp"
+            android:text="更新"
+            android:onClick="onClick"
+            android:drawableEnd="@mipmap/xiala"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.orangelittle.u17.util.PullToRefresh
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/boumore_ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="4dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrMode="both"
+        />
+
+</LinearLayout>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/more_progressbar"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+</FrameLayout>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="bouComic"
+            type="com.orangelittle.u17.entry.Bou_Comic"/>
+        <import type="com.orangelittle.u17.R"/>
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/bou_item_comic_item_pic"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:onClick="@{v ->bouComic.click(v , bouComic)}"
+        fresco:placeholderImage="@mipmap/u17_default_comic_cover_bg"
+        android:imageURI="@{bouComic.cover}"
+        />
+
+    <TextView
+        android:id="@+id/bou_item_commic_item_des"
+        android:text ="@{bouComic.short_description}"
+        android:layout_margin="5dp"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/bou_item_commic_item_name"
+        android:text ="@{bouComic.name}"
+        android:layout_margin="5dp"
+        android:maxLines="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+</layout>

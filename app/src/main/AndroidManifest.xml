@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orangelittle.u17">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+
+    <application
+        android:name=".global.U17Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/u17_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MainTheme">
+        </activity>
+        <activity android:name=".activity.MainActivityOld" />
+        <activity android:name=".activity.ChapterActivity">
+            <intent-filter>
+                <action android:name="com.ChapterDetail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".other_activity.Classify_Activity" />
+        <activity android:name=".activity.ReadComicActivity" />
+        <activity android:name=".activity.JumpFromSearch" />
+        <activity android:name=".other_activity.SpecialActivity" />
+        <activity android:name=".activity.RankActivity" />
+        <activity android:name=".activity.SpecialTopicActivity" />
+        <activity android:name=".activity.SpecialTopicDetailActivity" />
+        <activity android:name=".other_activity.BouMoreActivity" />
+        <activity android:name=".other_activity.GameDetailActivity">
+            <intent-filter>
+                <action android:name="com.gameDetail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.CommentActivity" />
+        android:exported="true" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:theme="@style/MainTheme" />
+        <activity android:name=".other_activity.Animation_Activity" />
+        <activity android:name=".activity.SignActivity"></activity>
+        <activity android:name=".activity.ForgetPassActivity"></activity>
+        <activity android:name=".activity.ForgetPassNextActivity"></activity>
+        <activity android:name=".activity.RegisterActivity"></activity>
+        <activity android:name=".activity.RegisterNextActivity"></activity>
+         <activity android:name=".activity.LoginActiivty"></activity>
+
+        <activity android:name=".activity.GuideActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            ></activity>
+        <activity android:name=".activity.SplashActivity"
+            android:theme="@style/SplashActivityTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--设置侧滑菜单位于statusbar下面-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!--&lt;!&ndash;透明化状态栏&ndash;&gt;-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+    </style>
+</resources>

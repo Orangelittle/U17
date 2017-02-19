@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    >
+
+    <TextView
+        android:id="@+id/myedit_warn"
+        style="@style/text_black_16sp"
+        android:textColor="@color/pink"
+        android:text="adaf"
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:id="@+id/myedit_content"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:layout_below="@+id/myedit_warn"
+        />
+
+    <ImageView
+        android:id="@+id/myedit_iv_del"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/myedit_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_deltext"
+        android:visibility="gone"
+        />
+
+    <View
+        android:id="@+id/myedit_divider"
+        style="@style/divider_hor_gray"
+        android:layout_below="@+id/myedit_content"></View>
+</RelativeLayout>

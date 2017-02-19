@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="pink">#FB8673</color>
+    <color name="colorGreen">#9cf415</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="rec_line">#979494</color>
+    <color name="recycler_line">#8c8888</color>
+    <color name="theme">#d97e7e</color>
+    <color name="gray">#b3a7a7</color>
+    <color name="rec_search">#3b3232</color>
+    <color name="colorGray">#c7c2c2</color>
+    <color name="more_gray">#aad1cbcb</color>
+    <color name="colorDanLv">#eaf2ce</color>
+    <color name="tabchangecolor">#8BDF57</color>
+    <color name="tabnormalcolor">#444444</color>
+
+
+    <color name="searchbg">#81232323</color>
+    <color name="waveviewforegroundcolor">#FFFFFF</color>
+
+    <color name="minedialogbtn_bg">#ef0576c7</color>
+    <color name="minedialogbtn_canclebg">#f4cc2c17</color>
+    <color name="statusbar_bg">#8700fda0</color>
+
+
+    <color name="login_gray">#F0F0F0</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000000</color>
+    <color name="divider_gray">#F2F2F2</color>
+    <color name="text_black">#333333</color>
+    <color name="divider_gray_F5">#F5F5F5</color>
+    <color name="text_gray">#666666</color><!-- 灰色 -->
+    <color name="red">#FA0550</color>
+</resources>

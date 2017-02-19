@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myEditText="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdf9db">
+
+<ImageView
+    android:id="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/bg_login_top"
+    />
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:layout_below="@id/top"
+        android:id="@+id/login_phone"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        myEditText:maxLenght="11"
+        myEditText:isNum="true"
+        myEditText:text_hint="手机号"
+        myEditText:warnText="手机号" />
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/login_phone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        myEditText:text_hint="登录密码"
+        myEditText:isPassWord="true"
+        myEditText:warnText="登录密码" />
+
+
+    <TextView
+        android:id="@+id/login_bt_login"
+        style="@style/bottom_button"
+        android:layout_below="@+id/login_password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/loginbtn_bg"
+        android:text="登录" />
+
+    <TextView
+        android:id="@+id/login_tv_register"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_bt_login"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:text="注册"
+        android:textColor="#1bed17" />
+
+    <TextView
+        android:id="@+id/login_tv_forgetPass"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/login_tv_register"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text="找回密码？"
+        android:textSize="15sp"
+        android:textColor="#000" />
+<LinearLayout
+    android:id="@+id/otherlogin"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="10dp"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/login_Sina_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/icon_login_sina" />
+
+    <ImageView
+        android:id="@+id/login_WeChat_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/icon_login_weixin" />
+
+    <ImageView
+        android:id="@+id/login_QQ_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/icon_login_qq" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/otherlogin"
+        android:layout_margin="10dp">
+
+        <View
+            style="@style/divider_hor_gray"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@color/login_gray"
+            ></View>
+        <TextView
+            style="@style/text_gray_14sp"
+            android:text="使用以下账户登录"
+            android:textColor="#BEBEBE"
+            android:layout_gravity="center_vertical"
+            />
+        <View
+            style="@style/divider_hor_gray"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/login_gray"
+            ></View>
+    </LinearLayout>
+</RelativeLayout>

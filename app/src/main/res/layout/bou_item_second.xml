@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="second"
+            type="com.orangelittle.u17.entry.BouItemSecond"/>
+    </data>
+
+<LinearLayout
+    android:background="@color/colorWhite"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="15dp"
+    >
+    <ImageView
+        android:id="@+id/bou_item_secound_rank"
+        android:src="@mipmap/main_boutique_head_point_ranking"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:onClick="@{second.click}"
+
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:text="排行"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        >
+
+        <ImageView
+            android:id="@+id/bou_item_secound_special"
+            android:src="@mipmap/main_boutique_head_point_special"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="@{second.click}"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="专题"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        >
+        <ImageView
+            android:id="@+id/bou_item_secound_classify"
+            android:src="@mipmap/main_boutique_head_point_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="@{second.click}"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="分类"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        >
+
+        <ImageView
+            android:id="@+id/bou_item_secound_animation"
+            android:src="@mipmap/main_boutique_head_point_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="@{second.click}"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="动画"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+</layout>

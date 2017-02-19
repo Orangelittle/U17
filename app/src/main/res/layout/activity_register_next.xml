@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myEditView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:id="@+id/register_next_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/myeditor_bg"
+        myEditView:text_hint="短信验证码"
+        myEditView:warnText="短信验证码"></com.orangelittle.u17.widget.MyEditText>
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:background="@drawable/myeditor_bg"
+        android:id="@+id/register_next_pass"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/register_next_code"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        myEditView:isPassWord="true"
+        myEditView:text_hint="请输入密码"
+        myEditView:warnText="请输入密码"></com.orangelittle.u17.widget.MyEditText>
+
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:background="@drawable/myeditor_bg"
+        android:id="@+id/register_next_confirmpass"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/register_next_pass"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        myEditView:isPassWord="true"
+        myEditView:text_hint="再次确认密码"
+        myEditView:warnText="再次确认密码"></com.orangelittle.u17.widget.MyEditText>
+
+    <TextView
+        android:id="@+id/register_next_bt_submit"
+        style="@style/bottom_button"
+        android:layout_below="@+id/register_next_confirmpass"
+        android:layout_margin="10dp"
+        android:background="@drawable/loginbtn_bg"
+        android:text="注册" />
+
+    <CheckBox
+        android:id="@+id/register_next_checkBox"
+        style="@style/text_black_14sp"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:text="注册表示同意"
+        android:layout_below="@+id/register_next_bt_submit"
+        android:layout_marginLeft="10dp"
+        android:checked="true"
+        />
+
+    <TextView
+        android:id="@+id/register_next_license"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:textColor="@color/pink"
+        android:text="《用户协议》"
+        android:layout_alignTop="@+id/register_next_checkBox"
+        android:layout_toRightOf="@+id/register_next_checkBox"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

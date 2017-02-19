@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:clipToPadding="true"-->
+        <!--android:background="@mipmap/mine_bg" />-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/mine_appbar"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/waveviewforegroundcolor"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:fitsSystemWindows="true"
+                android:clipToPadding="true"
+                android:background="@mipmap/bg_mine_head">
+
+                <com.orangelittle.u17.widget.WaveView
+                    android:id="@+id/mWaveView"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <com.orangelittle.u17.widget.CircleImageView
+                    android:layout_width="80dp"
+                    android:id="@+id/touxiang"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="23dp"
+                    android:fitsSystemWindows="true"
+                    android:src="@mipmap/me_avatar_boy"
+                    android:layout_height="80dp" />
+
+            </FrameLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/mine_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="0dp"
+                app:paddingEnd="0dp"
+                app:paddingStart="0dp"
+                app:titleMarginStart="0dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.orangelittle.u17.widget.CircleImageView
+                        android:id="@+id/changed_favicon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                      android:layout_centerInParent="true"
+                        android:src="@mipmap/me_avatar_boy"
+                        />
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/mine_tab"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#f9efee"-->
+            <!--app:tabIndicatorColor="#f00"-->
+            <!--app:tabSelectedTextColor="#000"-->
+            <!--app:tabTextColor="#595656" />-->
+        <com.orangelittle.u17.widget.MyTabViewGroup
+        xmlns:youyaoqi="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mine_tab"
+        android:background="@color/waveviewforegroundcolor"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <com.orangelittle.u17.widget.MyTabView
+        android:id="@+id/rb_collection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        youyaoqi:bitmapwidth="25dp"
+        youyaoqi:bitmaphight="25dp"
+        youyaoqi:bottomBitmap="@mipmap/mine_normal_collections"
+        youyaoqi:text="收藏"
+        youyaoqi:textsize="10sp"
+        youyaoqi:normalcolor="@color/tabnormalcolor"
+        youyaoqi:changecolor="@color/tabchangecolor"
+        youyaoqi:topBitmap="@mipmap/mine_light_collections"/>
+
+        <com.orangelittle.u17.widget.MyTabView
+        android:id="@+id/rb_history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        youyaoqi:bottomBitmap="@mipmap/mine_normal_history"
+        youyaoqi:text="历史"
+        youyaoqi:textsize="10sp"
+        youyaoqi:bitmaphight="25dp"
+        youyaoqi:bitmapwidth="25dp"
+        youyaoqi:normalcolor="@color/tabnormalcolor"
+        youyaoqi:changecolor="@color/tabchangecolor"
+        youyaoqi:topBitmap="@mipmap/mine_light_history"/>
+
+        <com.orangelittle.u17.widget.MyTabView
+        android:id="@+id/rb_download"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        youyaoqi:bottomBitmap="@mipmap/mine_normal_download"
+        youyaoqi:text="下载"
+        youyaoqi:textsize="10sp"
+        youyaoqi:bitmapwidth="25dp"
+        youyaoqi:bitmaphight="25dp"
+        youyaoqi:normalcolor="@color/tabnormalcolor"
+        youyaoqi:changecolor="@color/tabchangecolor"
+        youyaoqi:topBitmap="@mipmap/mine_light_download"/>
+
+        </com.orangelittle.u17.widget.MyTabViewGroup>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="#d6717070"
+    />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mine_viewpager"
+        android:background="#f9efee"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <com.orangelittle.u17.widget.FloatBallView
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/floatballblack_bg"
+        app:autoBack="true"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center|left"
+        android:gravity="center"
+        app:millisInFuture="2500"
+        app:moveable="true"
+       >
+        <RadioButton
+            android:id="@+id/clear_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:checked="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="清空历史"
+            android:textColor="@drawable/floatball_textcolor_selector" />
+
+        <RadioButton
+            android:id="@+id/go_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="签到"
+            android:textColor="@drawable/floatball_textcolor_selector" />
+
+        <RadioButton
+            android:id="@+id/check_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="切换用户"
+            android:textColor="@drawable/floatball_textcolor_selector" />
+
+    </com.orangelittle.u17.widget.FloatBallView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="13dp"
+    android:paddingLeft="22.5dp"
+    android:paddingRight="22.5dp"
+    android:paddingTop="16dp" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_open_camera"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:background="@drawable/minedialog_round_bg"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/colorBlack"
+            />
+        <Button
+            android:id="@+id/btn_choose_img"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/minedialog_round_bg"
+            android:gravity="center"
+            android:text="从相册中选择"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/colorBlack"
+        />
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="42dip"
+        android:layout_marginTop="15dip"
+        android:textColor="#ffffff"
+        android:background="@drawable/minedialog_round_canclebg"
+        android:gravity="center"
+        android:text="取消"
+        android:textSize="18sp" />
+
+</LinearLayout>

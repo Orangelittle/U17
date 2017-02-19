@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myEditView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_toolbar"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            style="@style/text_title"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_top_back"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/forget_confirm_phone"
+        style="@style/text_black_16sp"
+        android:layout_below="@id/title_layout"
+        android:text="手机号：13212414144"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:id="@+id/forget_confirm_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/myeditor_bg"
+        android:layout_below="@+id/forget_confirm_phone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        myEditView:isNum="true"
+        myEditView:maxLenght="6"
+        myEditView:text_hint="请输入短信验证码"
+        myEditView:warnText="请输入短信验证码"></com.orangelittle.u17.widget.MyEditText>
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:id="@+id/forget_confirm_new_pass"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/myeditor_bg"
+        android:layout_below="@+id/forget_confirm_code"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        myEditView:isPassWord="true"
+        myEditView:text_hint="请输入新密码"
+        myEditView:warnText="请输入新密码"></com.orangelittle.u17.widget.MyEditText>
+
+    <com.orangelittle.u17.widget.MyEditText
+        android:id="@+id/forget_confirm_re_newpass"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/forget_confirm_new_pass"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        myEditView:isPassWord="true"
+        android:background="@drawable/myeditor_bg"
+        myEditView:text_hint="请再次输入新密码"
+        myEditView:warnText="请再次输入新密码"></com.orangelittle.u17.widget.MyEditText>
+
+    <TextView
+        android:id="@+id/forget_confirm_bt_submit"
+        style="@style/bottom_button"
+        android:layout_below="@+id/forget_confirm_re_newpass"
+        android:layout_margin="10dp"
+        android:background="@drawable/loginbtn_bg"
+        android:text="确认" />
+
+    <TextView
+        style="@style/text_black_14sp"
+        android:textSize="15sp"
+        android:text="短信验证码已发到您的手机"
+        android:layout_below="@+id/forget_confirm_bt_submit"
+        android:layout_marginLeft="10dp"
+        />
+
+</RelativeLayout>

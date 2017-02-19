@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">有妖气漫画</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="recommend">推荐</string>
+    <string name="myshelf">个人中心</string>
+    <string name="boutique">精品</string>
+    <string name="game">游戏</string>
+
+    <string name="behavior_footer">com.orangelittle.u17.behavior.FooterBehavior</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+
+    <string name="share_element_game">elementsofgame</string>
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="bou_free"
+            type="com.orangelittle.u17.entry.Bou_ComicList_Item"/>
+    </data>
+
+<LinearLayout
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:padding="15dp"
+            android:id="@+id/bou_item_comic_pic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            fresco:placeholderImage = "@mipmap/u17_default_image_wrap"
+            android:imageURI ="@{bou_free.titleIconUrl}"
+            />
+
+        <TextView
+            android:id="@+id/bou_item_title"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            tools:text="强力推荐作品"
+            android:text="@{bou_free.itemTitle}"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content" />
+
+
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/bou_item_description"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/pic_today_free"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <include layout="@layout/bou_comic_free_bottom" android:id="@+id/bou_lin"
+        app:bouFreeItem ="@{bou_free.comics[0]}"
+        />
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="bouFreeItem"
+            type="com.orangelittle.u17.entry.Bou_Comic"/>
+    </data>
+
+<LinearLayout
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="10dp"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/bou_item_comic_free_pic"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:onClick="@{v ->bouFreeItem.click(v ,bouFreeItem ) }"
+        fresco:placeholderImage="@mipmap/u17_default_comic_cover_bg"
+        android:imageURI="@{bouFreeItem.cover}"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/bou_item_comic_free_pic_name"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@{bouFreeItem.name}"
+
+            />
+
+        <TextView
+            android:id="@+id/bou_item_comic_free_pic_des"
+            android:textSize="12sp"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:maxLines="3"
+            android:text="@{bouFreeItem.description}"
+
+            />
+
+        <TextView
+            android:id="@+id/bou_item_comic_free_pic_author_name"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@{bouFreeItem.author_name}"
+
+            />
+        <TextView
+            android:id="@+id/bou_item_comic_free_read"
+            android:textSize="20sp"
+            android:layout_width="121dp"
+            android:background="#58d658"
+            android:textColor="#ffffff"
+            android:text="开始阅读"
+            android:onClick="@{v ->bouFreeItem.click(v,bouFreeItem)}"
+
+            android:textAlignment="center"
+
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>

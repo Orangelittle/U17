@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/dialog_note_bg"
+    >
+
+    <TextView
+        android:id="@+id/note_dialog_title"
+        style="@style/text_black_18sp"
+        android:text="提示"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/note_dialog_content"
+        style="@style/text_black_16sp"
+        android:text="确认放弃编辑？"
+        android:layout_below="@+id/note_dialog_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/note_dialog_confirm"
+        style="@style/text_black_16sp"
+        android:layout_width="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="确定"
+        android:layout_below="@+id/note_dialog_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/pink"
+        android:layout_alignParentRight="true"
+        />
+    <TextView
+        android:id="@+id/note_dialog_cancel"
+        style="@style/text_black_16sp"
+        android:layout_width="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="取消"
+        android:layout_below="@+id/note_dialog_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/pink"
+        android:layout_toLeftOf="@+id/note_dialog_confirm"
+        />
+</RelativeLayout>

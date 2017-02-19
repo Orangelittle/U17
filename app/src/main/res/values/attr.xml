@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyTabView">
+        <attr name="bottomBitmap" format="reference" />
+        <attr name="topBitmap" format="reference" />
+        <attr name="text" format="string" />
+        <attr name="textsize" format="dimension" />
+        <attr name="normalcolor" format="color"/>
+        <attr name="changecolor" format="color"/>
+        <attr name="bitmapwidth" format="dimension"/>
+        <attr name="bitmaphight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="free" >
+        <attr name="millisInFuture" format="integer" />
+        <attr name="toAlpha" format="float" />
+        <attr name="moveable" format="boolean"/>
+        <attr name="autoBack" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyEditText">
+        <attr name="isNum" format="boolean"></attr>
+        <attr name="maxLenght" format="integer"></attr>
+        <attr name="text_hint" format="string"></attr>
+        <attr name="warnText" format="string"></attr>
+        <attr name="isPassWord" format="boolean"></attr>
+        <attr name="contenttext" format="string"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+</resources>
+

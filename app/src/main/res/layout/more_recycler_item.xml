@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="moreComicsBean"
+            type="com.orangelittle.u17.entries.level1.RankListBean.DataBean.ReturnDataBean.ComicsBean"/>
+    </data>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/colorDanLv"
+    android:padding="10dp"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/more_recycle_item_pic"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:onClick="@{v ->moreComicsBean.click(v ,moreComicsBean ) }"
+        fresco:placeholderImage="@mipmap/u17_default_comic_cover_bg"
+        android:imageURI="@{moreComicsBean.cover}"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/more_recycle_item_name"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@{moreComicsBean.name}"
+
+            />
+        <TextView
+            android:id="@+id/more_recycle_item_type_authorname"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:id="@+id/more_recycle_item__des"
+            android:textSize="12sp"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:maxLines="3"
+            android:text="@{moreComicsBean.description}"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>

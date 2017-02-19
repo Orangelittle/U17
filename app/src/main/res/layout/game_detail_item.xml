@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="15dp"
+        android:background="@drawable/bg_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/back"
+            android:src="@mipmap/toolbar_back_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="游戏详情"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="10dp">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/coverUrl"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:placeholderImage="@mipmap/main_recycler_image_default" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/coverUrl"
+                tools:text="山海战记" />
+
+            <TextView
+                android:id="@+id/downloadTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/coverUrl"
+                android:textColor="@color/gray"
+                android:textSize="10dp"
+                tools:text="%d次下载" />
+
+            <TextView
+                android:id="@+id/gameType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/downloadTimes"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/coverUrl"
+                android:textSize="12dp"
+                tools:text="卡牌养成" />
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/downloadTimes"
+                android:textColor="@color/gray"
+                android:textSize="10dp"
+                tools:text="333.66MB" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/more_gray"
+            android:id="@+id/game_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/gray"
+            android:padding="15dp"
+            android:textSize="14sp"
+            android:text="游戏简介"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/desc"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <com.orangelittle.u17.widget.FlickerProgressBar
+        android:id="@+id/downUrl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="下载"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorWhite"/>
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="800dp">-->
+    <!--</ScrollView>-->
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="galleryAdapter"
+            type="com.orangelittle.u17.adapter.GalleryPagerAdapter" />
+
+        <import type="com.orangelittle.u17.R" />
+    </data>
+
+    <android.support.percent.PercentFrameLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/bou_gallery_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:adapter="@{galleryAdapter}"
+            android:onClick="@{v ->galleryAdapter.click(v)}"
+            app:layout_aspectRatio="180%"
+            app:layout_widthPercent="100%" />
+
+        <LinearLayout
+
+            android:id="@+id/bou_gallery_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/bou_gallery_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/my_margin"
+            android:src="@drawable/white_point" />
+
+    </android.support.percent.PercentFrameLayout>
+</layout>

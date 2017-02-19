@@ -1,0 +1,125 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="bouAdapter"
+            type="com.orangelittle.u17.adapter.Bou_RecyclerAdapter"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context="com.example.ice.u17.fragment.BoutiqueFragment">
+        <com.orangelittle.u17.util.PullToRefresh
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/bou_PullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="4dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true"
+            ptr:ptrMode="both"
+            />
+        <!--<ImageView-->
+            <!--android:id="@+id/fg_boutique_search"-->
+
+            <!--android:paddingRight="5dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:src="@mipmap/main_search"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:onClick="@{bouAdapter.click}"-->
+            <!--/>-->
+        <ProgressBar
+            android:id="@+id/bou_progressbar"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/cloud"
+            android:visibility="gone"
+            android:background="#dbffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.orangelittle.u17.widget.CircleMenu
+        android:id="@+id/fab"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="25dp"
+         />
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_marginBottom="80dp"-->
+        <!--android:layout_marginRight="30dp"-->
+        <!--android:src="@mipmap/fab"-->
+        <!--app:backgroundTint="#ff87ffeb" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|right"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginBottom="150dp"-->
+            <!--android:layout_marginRight="40dp"-->
+            <!--&gt;-->
+            <!--<TextView-->
+                <!--android:visibility="invisible"-->
+                <!--android:id="@+id/tv1"-->
+                <!--android:text="推荐"-->
+                <!--android:drawablePadding="6dp"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:drawableRight="@mipmap/main_boutique_head_point_ranking" />-->
+            <!--<TextView-->
+                <!--android:visibility="invisible"-->
+                <!--android:id="@+id/tv2"-->
+                <!--android:drawablePadding="6dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:drawableRight="@mipmap/main_boutique_head_point_special"-->
+                <!--android:text="专题"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:visibility="invisible"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:id="@+id/tv3"-->
+                <!--android:drawablePadding="6dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:drawableRight="@mipmap/main_boutique_head_point_classify"-->
+                <!--android:text="分类"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:visibility="invisible"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:id="@+id/tv4"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:drawableRight="@mipmap/main_boutique_head_point_animation"-->
+                <!--android:text="动画"-->
+                <!--android:drawablePadding="6dp"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+
+    </FrameLayout>
+</layout>

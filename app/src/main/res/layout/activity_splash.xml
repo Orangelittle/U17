@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/ic_splash_relate"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="#70ffffff"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_splash_blank"
+            >
+            <RelativeLayout
+                android:id="@+id/splash_layout"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/ic_circle_bg"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <com.orangelittle.u17.widget.CircleImageView
+                    android:id="@+id/splash_iv"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/splash_name"
+                style="@style/text_black_16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/splash_layout"
+                android:text="有妖气漫画" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/splash_welcome"
+        style="@style/text_black_16sp"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/splash_layout_bottom"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="欢迎回来" />
+
+    <LinearLayout
+        android:id="@+id/splash_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:padding="15dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></View>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_c" />
+
+        <TextView
+            style="@style/text_gray_14sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="Orangelittle" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></View>
+    </LinearLayout>
+</RelativeLayout>
